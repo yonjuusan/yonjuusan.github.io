@@ -32,7 +32,11 @@
 </div>
 
 <script>
-    document.cookie = 'alreadyVisited=true'
+    if (document.cookie != 'alreadyVisited=true') {
+        alert('cookie not set')
+        document.body.innerHTML = ''
+        throw new Error();
+    }
 
     let secret = 'qkkaaspbjguwrzaalgjdcpuusvhjkzwq'
 
